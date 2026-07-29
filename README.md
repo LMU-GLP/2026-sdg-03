@@ -11,8 +11,10 @@ This repo is nearly empty on purpose. Paste this into Claude Code. It will
 interview you first, then build the wiki around your answers:
 
 ```
-We're the SDG 03 (Good Health and Well-being) team. Our challenge: "How might we support young people's mental health through a simple product, service, or community program?"
-We can focus on Los Angeles, South Korea, or any other part of the world.
+We're the SDG 03 (Good Health and Well-being) team. Our challenge: "How might
+we support young people's mental health through a simple product, service, or
+community program?" We can focus on Los Angeles, South Korea, or any other
+part of the world.
 
 Read this gist and set up this repo as an LLM wiki for that challenge:
 https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
