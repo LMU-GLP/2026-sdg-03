@@ -24,9 +24,10 @@
 
 The YRBS is a nationally representative survey of U.S. high school students. It
 does not break out Los Angeles County. **Finding an L.A.-specific figure is this
-team's first job in Friday's source sprint.** Good places to look: the L.A.
-County Department of Public Health, LAUSD's own student surveys, or the
-California Healthy Kids Survey. Be careful with numbers you find on therapy
+team's first job on Friday.** When you read your wiki, if there's no local
+number in it, ask Claude for one directly. Good places to look: the L.A. County
+Department of Public Health, LAUSD's own student surveys, or the California
+Healthy Kids Survey. Be careful with numbers you find on therapy
 clinic or treatment center websites — several circulating L.A. mental health
 statistics trace back to marketing pages with no primary source, and a judge can
 check.
