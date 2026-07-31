@@ -11,6 +11,7 @@ it's built from.
 | [Existing Programs](existing-programs.md) | The Youstar Foundation's Korean-language warmline in LA — one working example of a low-cost, volunteer-run service model. |
 | [LA vs. South Korea comparison](la-vs-south-korea.md) | Why the two regions' figures can't be lined up in one table, and what each region's evidence says on its own terms. |
 | [Problem Statement](problem-statement.md) | The team's committed region (South Korea), affected population (middle/high school students), and the evidence behind it. |
+| [Concept](concept.md) | A school-delivered VR/XR program simulating social isolation scenarios for students, paired with a counselor safety net and referral path. |
 
 ## Sources behind this wiki
 

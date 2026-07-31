@@ -17,3 +17,9 @@ Append-only record of wiki-building operations.
   25.7% reporting depression) over a projected national total. Noted a gap:
   no Korea-based program source exists yet in `sources/` — the only
   existing-program source (`youstar-foundation-warmline.md`) is LA-based.
+- **2026-07-31** — Interviewed the team and wrote `concept.md`. Team chose a
+  school-delivered VR/XR program simulating social isolation/withdrawal
+  scenarios for students, with a two-layer safety net (counselor present +
+  in-app referral prompt). Noted open gaps: no Korea-based program
+  precedent, no sourced figure on exam-culture stress, no sourced figure on
+  headset cost or school procurement.
