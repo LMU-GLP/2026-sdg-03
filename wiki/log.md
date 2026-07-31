@@ -11,3 +11,9 @@ Append-only record of wiki-building operations.
   `la-vs-south-korea.md`, and `index.md`. Flagged that no LA-specific youth
   mental health prevalence figure exists yet in `sources/` — noted as a gap
   on `los-angeles.md` and `la-vs-south-korea.md`.
+- **2026-07-31** — Interviewed the team and wrote `problem-statement.md`.
+  Team committed to South Korea as the region, middle/high school students
+  as the affected population, and the surveyed count (54,170 students,
+  25.7% reporting depression) over a projected national total. Noted a gap:
+  no Korea-based program source exists yet in `sources/` — the only
+  existing-program source (`youstar-foundation-warmline.md`) is LA-based.
