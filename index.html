@@ -159,13 +159,17 @@
   .evidence-strip .row {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     gap: 16px;
     padding: 10px 0;
     border-bottom: 1px solid var(--line);
     font-size: 0.95rem;
   }
   .evidence-strip .row:last-child { border-bottom: none; }
-  .evidence-strip .row .fig { font-weight: 700; white-space: nowrap; }
+  .evidence-strip .row .fig-wrap { text-align: right; flex-shrink: 0; }
+  .evidence-strip .row .fig { font-weight: 700; white-space: nowrap; display: block; }
+  .evidence-strip .row .fig-cite { font-size: 0.68rem; color: var(--muted); white-space: nowrap; }
+  .evidence-strip .row .fig-cite a { color: var(--muted); }
 
   footer {
     padding: 40px 0 60px;
@@ -228,7 +232,7 @@
       population as the numbers above: the
       25.7% of surveyed students already reporting depression, not a
       hypothetical group.
-      <span class="cite">Source: <a class="src-link" href="wiki/concept.md">wiki/concept.md</a></span>
+      <span class="cite">Source: <a class="src-link" href="sources/korea-youth-suicide.md">korea-youth-suicide.md</a></span>
     </p>
   </section>
 
@@ -261,25 +265,33 @@
     <div class="evidence-strip">
       <div class="row">
         <span>Leading cause of death, ages 9&ndash;24, for 14 straight years</span>
-        <span class="fig">since 2011</span>
+        <span class="fig-wrap">
+          <span class="fig">since 2011</span>
+          <span class="fig-cite">Source: <a class="src-link" href="sources/korea-youth-suicide.md">korea-youth-suicide.md</a></span>
+        </span>
       </div>
       <div class="row">
         <span>Suicide rate vs. next-leading cause (safety accidents, 3.3/100k)</span>
-        <span class="fig">3&times; higher</span>
+        <span class="fig-wrap">
+          <span class="fig">more than 3&times;</span>
+          <span class="fig-cite">Source: <a class="src-link" href="sources/korea-youth-suicide.md">korea-youth-suicide.md</a></span>
+        </span>
       </div>
       <div class="row">
         <span>Students surveyed who reported depression in the past year</span>
-        <span class="fig">25.7% of 54,170</span>
+        <span class="fig-wrap">
+          <span class="fig">25.7% of 54,170</span>
+          <span class="fig-cite">Source: <a class="src-link" href="sources/korea-youth-suicide.md">korea-youth-suicide.md</a></span>
+        </span>
       </div>
       <div class="row">
         <span>UN SDG Target 3.4's own indicator measures only mortality &mdash; not depression prevalence</span>
-        <span class="fig">a real gap</span>
+        <span class="fig-wrap">
+          <span class="fig">a real gap</span>
+          <span class="fig-cite">Source: <a class="src-link" href="sources/un-sdg3-targets.md">un-sdg3-targets.md</a></span>
+        </span>
       </div>
     </div>
-    <p class="cite" style="margin-top:12px;">
-      Sources: <a class="src-link" href="sources/korea-youth-suicide.md">korea-youth-suicide.md</a>,
-      <a class="src-link" href="sources/un-sdg3-targets.md">un-sdg3-targets.md</a>
-    </p>
   </section>
 
   <section>
@@ -297,8 +309,8 @@
   <footer>
     <p>
       Built from <a class="src-link" href="wiki/index.md">our research wiki</a> &mdash;
-      every figure above traces to a file in
-      <a class="src-link" href="sources/">sources/</a>.
+      every figure above traces to a file listed there under
+      &ldquo;Sources behind this wiki.&rdquo;
       Read the full <a class="src-link" href="wiki/problem-statement.md">problem statement</a>
       and <a class="src-link" href="wiki/concept.md">concept</a>.
     </p>
