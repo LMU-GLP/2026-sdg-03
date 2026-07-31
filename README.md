@@ -19,8 +19,9 @@ in its top-right corner.
 ## What's already here
 
 - `CLAUDE.md` — the rules Claude follows in this repo
-- `sources/` — two sources we found for you, one on Los Angeles and one on
-  South Korea. Read both before you pick a region
+- `sources/` — two sources we found for you. Read both before you pick a region:
+- [Los Angeles](sources/la-youth-mental-health.md)
+- [South Korea](sources/korea-youth-suicide.md)
 - UN targets for your goal: [sdgs.un.org/goals/goal3](https://sdgs.un.org/goals/goal3)
 
 ## What Claude Code is
