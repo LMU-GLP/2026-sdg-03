@@ -1,0 +1,307 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Practice Room for the Hardest Conversation</title>
+<style>
+  :root {
+    --ink: #1a1a2e;
+    --paper: #fdfcf9;
+    --accent: #c94f4f;
+    --accent-soft: #f3e3e3;
+    --muted: #6b6b7b;
+    --line: #e4e1da;
+    --card: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.55;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+  header.hero {
+    padding: 64px 0 48px;
+    border-bottom: 1px solid var(--line);
+  }
+  .eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin: 0 0 14px;
+  }
+  h1 {
+    font-size: clamp(1.7rem, 5vw, 2.4rem);
+    line-height: 1.2;
+    margin: 0 0 20px;
+  }
+  .lede {
+    font-size: 1.05rem;
+    color: var(--muted);
+    margin: 0 0 32px;
+    max-width: 60ch;
+  }
+
+  .stat-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 8px;
+  }
+  .stat {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 16px;
+  }
+  .stat .num {
+    font-size: clamp(1.5rem, 4vw, 1.9rem);
+    font-weight: 800;
+    color: var(--accent);
+    display: block;
+    line-height: 1.1;
+  }
+  .stat .label {
+    font-size: 0.88rem;
+    color: var(--ink);
+    margin-top: 4px;
+    display: block;
+  }
+  .cite {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 0.72rem;
+    color: var(--muted);
+  }
+  .cite a { color: var(--muted); }
+
+  section { padding: 44px 0; border-bottom: 1px solid var(--line); }
+  section h2 {
+    font-size: 1.4rem;
+    margin: 0 0 18px;
+  }
+  section p { margin: 0 0 16px; }
+
+  .steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: step;
+  }
+  .steps li {
+    counter-increment: step;
+    position: relative;
+    padding: 0 0 22px 44px;
+    border-left: 2px solid var(--line);
+    margin-left: 15px;
+  }
+  .steps li:last-child { border-left: 2px solid transparent; padding-bottom: 0; }
+  .steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: -17px;
+    top: -2px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .steps strong { display: block; margin-bottom: 4px; }
+  .steps span.detail { color: var(--muted); font-size: 0.95rem; }
+
+  .safety-badge {
+    display: inline-block;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 999px;
+    margin-top: 6px;
+  }
+
+  .honest-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .honest-list li {
+    padding: 12px 0;
+    border-bottom: 1px dashed var(--line);
+    display: flex;
+    gap: 10px;
+  }
+  .honest-list li:last-child { border-bottom: none; }
+  .honest-list .mark {
+    flex-shrink: 0;
+    color: var(--accent);
+    font-weight: 800;
+  }
+
+  .evidence-strip {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 10px;
+  }
+  .evidence-strip .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.95rem;
+  }
+  .evidence-strip .row:last-child { border-bottom: none; }
+  .evidence-strip .row .fig { font-weight: 700; white-space: nowrap; }
+
+  footer {
+    padding: 40px 0 60px;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  footer a { color: var(--muted); }
+
+  a.src-link {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--line);
+  }
+
+  @media (max-width: 480px) {
+    .honest-list li { flex-direction: column; }
+    .honest-list .cite { margin-top: 4px; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="hero">
+    <p class="eyebrow">SDG 3 · Good Health and Well-Being</p>
+    <h1>A practice room for the hardest conversation.</h1>
+    <p class="lede">
+      In South Korea, suicide has been the leading cause of death for
+      people aged 9&ndash;24 for 14 consecutive years running &mdash; and
+      more than a quarter of surveyed students already say they're
+      struggling. We built a way to practice reaching out, before a
+      student is in crisis.
+    </p>
+
+    <div class="stat-row">
+      <div class="stat">
+        <span class="num">10.9</span>
+        <span class="label">suicide deaths per 100,000 (ages 9&ndash;24, 2024) &mdash; the leading cause of death, 14 years running</span>
+        <span class="cite">Source: <a class="src-link" href="sources/korea-youth-suicide.md">korea-youth-suicide.md</a></span>
+      </div>
+      <div class="stat">
+        <span class="num">25.7%</span>
+        <span class="label">of 54,170 surveyed middle/high school students reported depression in the past year</span>
+        <span class="cite">Source: <a class="src-link" href="sources/korea-youth-suicide.md">korea-youth-suicide.md</a></span>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <h2>What we're building</h2>
+    <p>
+      A school-delivered VR program for Korean middle and high school
+      students. Using school-owned headsets, a student works through a
+      short, guided simulation of a social scenario that tends to trigger
+      isolation or withdrawal &mdash; being excluded, rejected, or ignored
+      &mdash; and practices a response in a low-stakes, repeatable setting,
+      instead of facing it for the first time in real life.
+    </p>
+    <p>
+      This is a rehearsal tool, not a treatment. It's aimed at the same
+      population as the numbers above: the
+      25.7% of surveyed students already reporting depression, not a
+      hypothetical group.
+      <span class="cite">Source: <a class="src-link" href="wiki/concept.md">wiki/concept.md</a></span>
+    </p>
+  </section>
+
+  <section>
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li>
+        <strong>Student puts on a school-issued headset</strong>
+        <span class="detail">During a counseling period or class &mdash; not something a student needs to own or bring from home.</span>
+      </li>
+      <li>
+        <strong>Guided isolation/withdrawal scenario</strong>
+        <span class="detail">A short, scripted moment &mdash; exclusion, rejection, being ignored &mdash; built for rehearsal, not open-ended exposure therapy.</span>
+      </li>
+      <li>
+        <strong>A counselor is present or waiting throughout</strong>
+        <span class="detail">Every session pairs the technology with a real adult who can step in.</span>
+        <span class="safety-badge">Safety layer 1</span>
+      </li>
+      <li>
+        <strong>In-app pause + referral prompt</strong>
+        <span class="detail">If the session shows signs of distress, it pauses and surfaces a counselor or warmline contact directly &mdash; software doesn't wait for a human to notice first.</span>
+        <span class="safety-badge">Safety layer 2</span>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Why this, why now</h2>
+    <div class="evidence-strip">
+      <div class="row">
+        <span>Leading cause of death, ages 9&ndash;24, for 14 straight years</span>
+        <span class="fig">since 2011</span>
+      </div>
+      <div class="row">
+        <span>Suicide rate vs. next-leading cause (safety accidents, 3.3/100k)</span>
+        <span class="fig">3&times; higher</span>
+      </div>
+      <div class="row">
+        <span>Students surveyed who reported depression in the past year</span>
+        <span class="fig">25.7% of 54,170</span>
+      </div>
+      <div class="row">
+        <span>UN SDG Target 3.4's own indicator measures only mortality &mdash; not depression prevalence</span>
+        <span class="fig">a real gap</span>
+      </div>
+    </div>
+    <p class="cite" style="margin-top:12px;">
+      Sources: <a class="src-link" href="sources/korea-youth-suicide.md">korea-youth-suicide.md</a>,
+      <a class="src-link" href="sources/un-sdg3-targets.md">un-sdg3-targets.md</a>
+    </p>
+  </section>
+
+  <section>
+    <h2>What this isn't</h2>
+    <ul class="honest-list">
+      <li><span class="mark">&times;</span> Not a diagnostic or clinical tool &mdash; it doesn't assess or diagnose depression.</li>
+      <li><span class="mark">&times;</span> Not a replacement for the counselor relationship &mdash; it's meant to bring students into contact with a counselor sooner, not instead of one.</li>
+      <li><span class="mark">&times;</span> No Korea-based program precedent exists in our research yet &mdash; the closest working example we found, the Youstar Foundation's warmline, operates in Los Angeles, not Korea.
+        <span class="cite" style="display:block;">Source: <a class="src-link" href="sources/youstar-foundation-warmline.md">youstar-foundation-warmline.md</a></span>
+      </li>
+      <li><span class="mark">&times;</span> No sourced figure yet on headset cost or Korean school technology budgets &mdash; procurement at scale is an open question, not a solved one.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>
+      Built from <a class="src-link" href="wiki/index.md">our research wiki</a> &mdash;
+      every figure above traces to a file in
+      <a class="src-link" href="sources/">sources/</a>.
+      Read the full <a class="src-link" href="wiki/problem-statement.md">problem statement</a>
+      and <a class="src-link" href="wiki/concept.md">concept</a>.
+    </p>
+  </footer>
+
+</div>
